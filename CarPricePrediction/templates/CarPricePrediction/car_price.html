@@ -1,0 +1,55 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+
+{% block 'body' %}
+<h1 class="mx-4 my-4">Enter the following values:</h1>
+<div class="container" >
+<form action="result/" method="GET"> 
+	<div class="row row-cols-2 mx-auto my-auto">
+		<div class='col my-3'>
+			<label for="year"> <h4> Year </h4> </label>
+  			<input class="form-control" type="text" name="year" id="year" value="2022" aria-label="default input example">
+		</div>
+		<div class='col my-3'>
+			<label for="kms_driven"> <h4> Distance Driven [Km] </h4> </label>
+  			<input class="form-control" type="text" name="kms_driven" id="kms_driven" value="0" aria-label="default input example">
+		</div>
+		<div class='col my-3'>
+			<label for="owner"> <h4> No. of Owner(s) </h4> </label>
+  			<input type="text" class="form-control" min="0" max="5" name="owner" id="owner" value="0" aria-label="default input example">
+		</div>
+		<div class='col my-3'>
+			<label for="fuel"> <h4>Fuel Type</h4> </label>
+  			<select class="form-select" name="fuel" id="fuel" aria-label="Default select example">
+  			  <option value="p" Selected> Petrol </option>
+			  <option value="d"> Diesel </option>
+			  <option value="c"> CNG </option>
+			</select>
+		</div>
+		<div class='col my-3'>
+			<label for="seller"> <h4>Seller Type</h4> </label>
+  			<select class="form-select" name="seller" id="seller" aria-label="Default select example">
+  			  <option value="i" Selected> Individual </option>
+			  <option value="d"> Dealer </option>
+			</select>
+		</div>
+		<div class='col my-3'>
+			<label for="transmission"> <h4>Transmission Type</h4> </label>
+			<select class="form-select" name="transmission" id="transmission" aria-label="Default select example">
+  			  <option value="m" Selected> Manual </option>
+			  <option value="a"> Automatic </option>
+			</select>
+		</div>
+	</div>
+	<div class="row row-cols-1 mx-auto my-auto">
+		<div class="col my-3">
+    			<button type="submit" class="btn btn-primary mb-3">Calculate</button>
+  		</div>
+	</div>
+</form>
+</div>
+{% endblock 'body' %}
+
+{% block 'JS'}
+    <script></script>
+{% endblock 'JS'}
