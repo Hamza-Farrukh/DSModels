@@ -12,6 +12,7 @@ cycler==0.11.0
 debugpy==1.6.3
 decorator==5.1.1
 defusedxml==0.7.1
+dj-database-url
 Django==4.1
 entrypoints==0.4
 executing==0.10.0
@@ -52,6 +53,7 @@ Pillow==9.2.0
 prometheus-client==0.14.1
 prompt-toolkit==3.0.30
 psutil==5.9.1
+psycopg2
 pure-eval==0.2.2
 pycparser==2.21
 Pygments==2.13.0
@@ -77,3 +79,4 @@ tzdata==2022.2
 wcwidth==0.2.5
 webencodings==0.5.1
 widgetsnbextension==4.0.2
+whitenoise==6.2.0
