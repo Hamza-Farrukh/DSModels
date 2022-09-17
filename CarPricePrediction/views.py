@@ -31,7 +31,7 @@ def result(request):
     else:
         seller_type = 0
     features = [[kms_driven, owner, fuel_type_diesel , fuel_type_petrol, seller_type, transmission, year]]
-    with open("CarPricePrediction/model_pickled.pkl", "rb") as f:
+    with open("static/CarPricePrediction/model/model.pkl", "rb") as f:
         model = pickle.load(f)
     y_pred = model.predict(features)
     params = {'result':y_pred}

@@ -2,30 +2,8 @@
 {% load static %}
 
 {% block 'body' %}
-<h1 class="mx-4 my-4">Select Model Category:</h1>
-<div class="container text-center" >
-	<div class="row row-cols-2 justify-content-md-center mx-auto my-auto">
-		<div class='col-6 my-3'>
-  			<a href="/regression/" class="btn btn-primary btn-lg col-12 py-4" type="button">Regression</a>
-		</div>
-		<div class='col-6 my-3'>
-  			<a href=" " class="btn btn-primary btn-lg col-12 py-4" type="button">Classification</a>
-		</div>
-		<div class='col-6 my-3'>
-  			<a href=" " class="btn btn-primary btn-lg col-12 py-4" type="button">Partial Clustering</a>
-		</div>
-
-		<div class='col-6 my-3'>
-  			<a href=" " class="btn btn-primary btn-lg col-12 py-4" type="button">Hierarchical Clustering</a>
-		</div>
-		<div class='col-6 my-3'>
-  			<a href=" " class="btn btn-primary btn-lg col-12 py-4" type="button">Deep Learning</a>
-		</div>
-		<div class='col-6 my-3'>
-  			<a href=" " class="btn btn-primary btn-lg col-12 py-4" type="button">Others</a>
-		</div>
-	</div>
-</div>
+	<h1 class="mx-4 my-4 text-light">Select Category:</h1>
+	{% include 'Home/buttons.html' %}
 {% endblock 'body' %}
 
 {% block 'JS'}

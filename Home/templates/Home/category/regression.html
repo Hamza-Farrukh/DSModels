@@ -1,0 +1,11 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+
+{% block 'body' %}
+	<h1 class="mx-4 my-4 container text-light">Select a Model:</h1>
+	{% include 'Home/category/list.html' %}
+{% endblock 'body' %}
+
+{% block 'JS'}
+    <script></script>
+{% endblock 'JS'}
