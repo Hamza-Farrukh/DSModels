@@ -1,13 +1,9 @@
-{% extends 'Home/base.html' %}
 {% load static %}
 
-{% block 'body' %}
-<h1 class="mx-4 my-4 text-light">Enter the following values:</h1>
-<div class="container text-light" >
-<form action="result/" method="GET"> 
-	<div class="row row-cols-2 mx-auto my-auto">
+<form action="result/" method="GET">
+	<div class="row row-cols-2 mx-2 my-3">
 		<div class='col my-3'>
-			<label for="year"> <h4> Year </h4> </label>
+			<label for="year"> <h4> Year Built </h4> </label>
   			<input class="form-control" type="text" name="year" id="year" value="2022" aria-label="default input example">
 		</div>
 		<div class='col my-3'>
@@ -41,15 +37,9 @@
 			</select>
 		</div>
 	</div>
-	<div class="row row-cols-1 mx-auto my-auto">
+	<div class="row row-cols-1 mx-2 my-3">
 		<div class="col my-3">
-    			<button type="submit" class="btn btn-primary mb-3">Calculate</button>
+    			<button type="submit" class="btn btn-primary">Calculate</button>
   		</div>
 	</div>
 </form>
-</div>
-{% endblock 'body' %}
-
-{% block 'JS'}
-    <script></script>
-{% endblock 'JS'}

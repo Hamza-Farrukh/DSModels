@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'CarPricePrediction.apps.CarpricepredictionConfig',
+    'Diabetes.apps.DiabetesConfig',
     'Home.apps.HomeConfig'
 ]
 

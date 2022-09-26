@@ -1,0 +1,51 @@
+{% load static %}
+
+<form action="result/" method="GET"> 
+	<div class="row row-cols-2 mx-auto my-auto">
+		<div class='col my-3'>
+			<label for="BMI"> <h4> BMI </h4> </label>
+  			<input class="form-control" type="text" name="BMI" id="BMI" value="32" aria-label="default input example">
+		</div>
+
+		<div class='col my-3'>
+			<label for="pf"> <h4> Pedigree Function </h4> </label>
+  			<input class="form-control" type="text" name="pf" id="pf" value="0.3725" aria-label="default input example">
+		</div>
+
+		<div class='col my-3'>
+			<label for="Age"> <h4> Age </h4> </label>
+  			<input type="text" class="form-control" min="0" max="100" name="age" id="age" value="30" aria-label="default input example">
+		</div>
+
+		<div class='col my-3'>
+			<label for="skin"> <h4> Skin </h4> </label>
+  			<input type="text" class="form-control" name="skin" id="skin" value="23" aria-label="default input example">
+		</div>
+
+		<div class='col my-3'>
+			<label for="glucose"> <h4> Glucose </h4> </label>
+  			<input type="text" class="form-control" name="glucose" id="glucose" value="120" aria-label="default input example">
+		</div>
+
+		<div class='col my-3'>
+			<label for="insulin"> <h4> Insulin </h4> </label>
+  			<input type="text" class="form-control" name="insulin" id="insulin" value="80" aria-label="default input example">
+		</div>
+
+		<div class='col my-3'>
+			<label for="bp"> <h4> Blood Pressure </h4> </label>
+  			<input type="text" class="form-control" name="bp" id="bp" value="70" aria-label="default input example">
+		</div>
+
+		<div class='col my-3'>
+			<label for="pregnant"> <h4> No. of Pregnancies </h4> </label>
+  			<input type="text" class="form-control" name="pregnant" id="pregnant" value="0" aria-label="default input example">
+		</div>
+
+	</div>
+	<div class="row row-cols-1 mx-auto my-auto">
+		<div class="col my-3">
+    			<button type="submit" class="btn btn-primary mb-3">Calculate</button>
+  		</div>
+	</div>
+</form>
