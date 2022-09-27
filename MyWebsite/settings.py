@@ -22,7 +22,6 @@ IS_HEROKU = "DYNO" in os.environ
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
-SECRET_KEY = 'django-insecure-p!@xu-ik_3!j#sg7p$bn9vvfc8*3zz@lf+6@o6d-3qx7qrdjrh'
 if 'SECRET_KEY' in os.environ:
     SECRET_KEY = os.environ["SECRET_KEY"]
 
