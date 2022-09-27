@@ -22,7 +22,7 @@ IS_HEROKU = "DYNO" in os.environ
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
-
+SECRET_KEY = 'django-insecure-p!@xu-ik_3!j#sg7p$bn9vvfc8*3zz@lf+6@o6d-3qx7qrdjrh'
 if 'SECRET_KEY' in os.environ:
     SECRET_KEY = os.environ["SECRET_KEY"]
 
@@ -33,8 +33,8 @@ else:
     ALLOWED_HOSTS = []
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# if not IS_HEROKU:
-#     DEBUG = True
+if not IS_HEROKU:
+    DEBUG = True
 
 
 # Application definition
@@ -49,7 +49,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'CarPricePrediction.apps.CarpricepredictionConfig',
     'Diabetes.apps.DiabetesConfig',
-    'Home.apps.HomeConfig'
+    'Home.apps.HomeConfig',
+    'Regression.apps.RegressionConfig',
+    'Classification.apps.ClassificationConfig',
 ]
 
 MIDDLEWARE = [
@@ -68,7 +70,7 @@ ROOT_URLCONF = 'MyWebsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

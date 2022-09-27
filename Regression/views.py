@@ -2,8 +2,13 @@ from django.shortcuts import render
 import pickle
 
 
+# Create your views here.
+def regression(request):
+    return render(request, 'Regression/regression.html')
+
+
 def car_price(request):
-    return render(request, 'CarPricePrediction/values.html')
+    return render(request, 'Regression/CarPricePrediction/values.html')
 
 
 def result(request):
@@ -42,9 +47,9 @@ def result(request):
     features = [[kms_driven, owner, fuel_type_diesel, fuel_type_petrol, seller_type, transmission, year]]
     feature_names = [['Distance Driven', kms_driven], ['No. of Owner(s)', owner], ['Fuel Type', fuel_type],
                      ['Seller Type', seller], ['Transmission Type', mode], ['Year Built', 2022-year]]
-    with open("static/CarPricePrediction/model/model.pkl", "rb") as f:
+    with open("static/Regression/CarPricePrediction/model/model.pkl", "rb") as f:
         model = pickle.load(f)
     y_pred = model.predict(features)
     accuracy = 79
     params = {'result': y_pred[0], 'accuracy': accuracy, 'features': feature_names}
-    return render(request, 'CarPricePrediction/results.html', params)
+    return render(request, 'Regression/CarPricePrediction/results.html', params)

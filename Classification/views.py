@@ -3,8 +3,13 @@ import pickle
 import pandas as pd
 
 
+# Create your views here.
+def classification(request):
+    return render(request, 'Classification/classification.html')
+
+
 def diabetes(request):
-    return render(request, 'Diabetes/values.html')
+    return render(request, 'Classification/Diabetes/values.html')
 
 
 def result(request):
@@ -25,7 +30,7 @@ def result(request):
                      ['Skin Thickness', skinthickness], ['Glucose', glucose], ['Insulin', insulin],
                      ['Blood Pressure', bp], ['No. of Pregnancies', pregnancy]]
 
-    with open("static/Diabetes/model/model.pkl", "rb") as f:
+    with open("static/Classification/Diabetes/model/model.pkl", "rb") as f:
         model = pickle.load(f)
 
     y_pred = model.predict(features)
@@ -36,4 +41,4 @@ def result(request):
         y_pred = 'Yes'
 
     params = {'result': y_pred, 'accuracy': accuracy, 'features': feature_names}
-    return render(request, 'Diabetes/results.html', params)
+    return render(request, 'Classification/Diabetes/results.html', params)
