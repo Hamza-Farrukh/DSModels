@@ -30,7 +30,7 @@ def result(request):
                      ['Skin Thickness', skinthickness], ['Glucose', glucose], ['Insulin', insulin],
                      ['Blood Pressure', bp], ['No. of Pregnancies', pregnancy]]
 
-    with open("static/Classification/Diabetes/model/model.pkl", "rb") as f:
+    with open("staticfiles/Classification/Diabetes/model/model.pkl", "rb") as f:
         model = pickle.load(f)
 
     y_pred = model.predict(features)

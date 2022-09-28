@@ -130,7 +130,7 @@ USE_TZ = True
 
 WHITENOISE_USE_FINDERS = True
 STATIC_ROOT = BASE_DIR / "staticfiles"
-STATIC_URL = 'static/'
+STATIC_URL = 'staticfiles/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
